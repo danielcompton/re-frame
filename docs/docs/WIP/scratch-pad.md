@@ -1,3 +1,9 @@
+---
+title: "Scratch Pad"
+published: false
+---
+
+
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 ## Table Of Contents
@@ -24,14 +30,14 @@
 
 SPAs are fundamentally mutative in nature.
 
-They change the DOM, databases, localstore, cookies, send emails etc. Its a veritable frenzy of mutation. And 
-this is a good thing. Any user of these SPAs wants to be changing the world, 
+They change the DOM, databases, localstore, cookies, send emails etc. Its a veritable frenzy of mutation. And
+this is a good thing. Any user of these SPAs wants to be changing the world,
 right, otherwise what's the point?
- 
-But we are wide-eyed functional zealots, heroically resisting the 
+
+But we are wide-eyed functional zealots, heroically resisting the
 entire notion of mutation, and insisting instead on the wonders of pure functions.
 
-re-frame solves this dilemma and allows you 
+re-frame solves this dilemma and allows you
 compose a mutative application from pure functions.
 
 
@@ -45,15 +51,15 @@ introductory Reagent tutorials before going on. Try:
 
 ##  Implements Reactive Data Flows
 
-This document describes how re-frame implements 
-the reactive data flows in dominoes 4 and 5 (queries and views). 
+This document describes how re-frame implements
+the reactive data flows in dominoes 4 and 5 (queries and views).
 
-It explains 
-the low level mechanics of the process which not something you 
-need to know initially. So, you can defer reading and understanding 
+It explains
+the low level mechanics of the process which not something you
+need to know initially. So, you can defer reading and understanding
 this until later, if you wish.  But you should at some point circle
-back and grok it.  It isn't hard at all. 
- 
+back and grok it.  It isn't hard at all.
+
 
 
 
@@ -61,7 +67,7 @@ back and grok it.  It isn't hard at all.
 
 
 
-## Reactive Programming 
+## Reactive Programming
 
 
 
@@ -96,7 +102,7 @@ Extending the diagram, we introduce `components`:
 app-db  -->  components  -->  Hiccup
 ```
 
-When using Reagent, your primary job is to write one or more `components`. 
+When using Reagent, your primary job is to write one or more `components`.
 This is the view layer.
 
 Think about `components` as `pure functions` - data in, Hiccup out.  `Hiccup` is
@@ -510,13 +516,13 @@ Notice that `on-click` DOM handler:
   #(dispatch [:yes-button-clicked])
 ```
 
-With re-frame, we want the DOM as passive as possible. We do 
-not want our views containing any imperative control logic. 
+With re-frame, we want the DOM as passive as possible. We do
+not want our views containing any imperative control logic.
 All of that should be computed by event handlers.
 
 We want that "on-click" as simple as we can make it.
 
-**Rule**:  `views` are as passive and minimal as possible when it 
+**Rule**:  `views` are as passive and minimal as possible when it
 comes to handling events. They `dispatch` pure data and nothing more.
 
 ## Prefer Dumb Views - Part 2
@@ -532,4 +538,4 @@ So this is bad:
     (into [:div] (for [i sorted-items] [item-view i]))))
 ```
 
-The view is not simply taking the data supplied by the 
+The view is not simply taking the data supplied by the

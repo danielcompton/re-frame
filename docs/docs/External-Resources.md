@@ -1,3 +1,7 @@
+---
+title: "External Resources"
+---
+
 ## External Resources
 
 Templates, examples, and other resources related to re-frame. For additions or modifications, please create an issue with a link and description or submit a pull request.
@@ -15,12 +19,12 @@ Templates, examples, and other resources related to re-frame. For additions or m
 
 ### Templates
 
-* [re-frame-template](https://github.com/Day8/re-frame-template) by [Day8] - The official re-frame template using Leiningen. 
+* [re-frame-template](https://github.com/Day8/re-frame-template) by [Day8] - The official re-frame template using Leiningen.
 
 * [Luminus](http://www.luminusweb.net) by [Yogthos] - A Clojure micro-framework based on a set of lightweight libraries using Leiningen. Based on re-frame `0.8.0`
 
 * [re-natal](https://github.com/drapanjanas/re-natal) by [Artūr Girenko] - A fork of [Natal](https://github.com/dmotz/natal) for bootstrapping Reagent and re-frame based React Native apps. Based on re-frame `0.8.0`
- 
+
 * [Slush-reframe](https://github.com/kristianmandrup/slush-reframe) by [Kristian Mandrup] - A scaffolding generator for re-frame run using NodeJS. Should work wih re-frame `0.7.0` if used on a project started from the `0.7.0` version of re-frame-template.
 
 * [Celibidache](https://github.com/velveteer/celibidache/) by [Velveteer] - An opinionated starter for re-frame applications using Boot. Based on re-frame `0.7.0`
@@ -42,7 +46,7 @@ Templates, examples, and other resources related to re-frame. For additions or m
 
 * [flux-challenge with re-frame](https://github.com/staltz/flux-challenge/tree/master/submissions/jelz) by [Jakub Elżbieciak] -  flux-challenge is "a frontend challenge to test UI architectures and solutions". This is a ClojureScript + re-frame version. Based on re-frame `0.5.0`
 
-* [fractalify](https://github.com/madvas/fractalify/) by [Matus Lestan] - 
+* [fractalify](https://github.com/madvas/fractalify/) by [Matus Lestan] -
   An entertainment and educational webapp for creating & sharing fractal images that powers [fractalify.com](http://fractalify.com). Based on re-frame `0.4.1`
 
 * [Angular Phonecat tutorial in re-frame](http://dhruvp.github.io/2015/03/07/re-frame/) by [Dhruv Parthasarathy] - A detailed step-by-step tutorial that ports the Angular Phonecat tutorial to re-frame. Based on re-frame `0.2.0`
@@ -79,6 +83,3 @@ Templates, examples, and other resources related to re-frame. For additions or m
 [Toni Reina]: https://github.com/areina
 [Velveteer]: https://github.com/velveteer
 [Yogthos]:http://yogthos.net/index.html
-
-
-	

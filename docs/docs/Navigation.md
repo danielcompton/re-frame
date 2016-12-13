@@ -1,3 +1,7 @@
+---
+title: "Navigation"
+---
+
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 ## Table Of Contents
@@ -22,7 +26,7 @@ When the user does something navigation-ish (selects a tab, a dropdown or someth
   (fn [db [_ value]]
     (assoc db :active-panel value)))
 
-(re-frame/dispatch 
+(re-frame/dispatch
   [:set-active-panel :panel1])
 ```
 
@@ -43,7 +47,7 @@ A high level reagent view has a subscription to :active-panel and will switch to
  []
  [:div "There"])
 
-(defn high-level-view 
+(defn high-level-view
   []
   (let [active  (re-frame/subscribe [:active-panel])]
     (fn []

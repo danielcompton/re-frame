@@ -1,3 +1,7 @@
+---
+title: "Why clear the subscription cache?"
+---
+
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 ## Table Of Contents
@@ -11,22 +15,22 @@
 
 Why do we call `clear-subscription-cache!` when reloading code with Figwheel?
 
-### Answer 
+### Answer
 
 Pour yourself a drink, as this is a circuitous tale involving one of the hardest
 problems in Computer Science.
- 
+
 **1: Humble beginnings**
 
-When React is rendering, if an exception is thrown, it doesn't catch or 
-handle the errors gracefully. Instead, all of the React components up to 
-the root are destroyed. When these components are destroyed, none of their 
+When React is rendering, if an exception is thrown, it doesn't catch or
+handle the errors gracefully. Instead, all of the React components up to
+the root are destroyed. When these components are destroyed, none of their
 standard lifecycle methods are called, like `ComponentDidUnmount`.
- 
+
 
 **2: Simple assumptions**
 
-Reagent tracks the watchers of a Reaction to know when no-one is watching and 
+Reagent tracks the watchers of a Reaction to know when no-one is watching and
 it can call the Reaction's `on-dispose`. Part of the book-keeping involved in
 this requires running the `on-dispose` in a React `ComponentWillUnmount` lifecycle
 method.
@@ -37,16 +41,16 @@ At this point, your spidey senses are probably tingling.
 
 re-frame subscriptions are created as Reactions. re-frame helpfully deduplicates
 subscriptions if multiple parts of the view request the same subscription. This
-is a big efficiency boost. When re-frame creates the subscription Reaction, it 
+is a big efficiency boost. When re-frame creates the subscription Reaction, it
 sets the `on-dispose` method of that subscription to remove itself from the
 subscription cache. This means that when that subscription isn't being watched
-by any part of the view, it can be disposed. 
+by any part of the view, it can be disposed.
 
 **4: The gnarly implications**
 
-If you are 
+If you are
 
-1. Writing a re-frame app 
+1. Writing a re-frame app
 2. Write a bug in your subscription code (your one bug for the year)
 3. Which causes an exception to be thrown in your rendering code
 

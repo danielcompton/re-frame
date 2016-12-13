@@ -1,3 +1,7 @@
+---
+title: "The re-frame logo"
+---
+
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 ## Table Of Contents
@@ -41,7 +45,7 @@ if you ask me. Their theory, not the Guggenheim.
 
 The infamous "Bad Touch" faction look at the logo and see the cljs <br>
 logo mating noisily with re-frame's official architecture diagram. <br>
-Attend one of their parties and you have a 50% chance of arrest. 
+Attend one of their parties and you have a 50% chance of arrest.
 
 ![](/images/logo/Genesis.png)
 
@@ -57,5 +61,3 @@ and "Why did you say I hit a horse?".
 ### Assets Where?
 
 Within this repo, look in `/images/logo/`
-
-

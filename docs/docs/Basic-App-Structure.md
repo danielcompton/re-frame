@@ -1,3 +1,7 @@
+---
+title: "Basic App Structure"
+---
+
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 ## Table Of Contents
@@ -30,24 +34,24 @@ For a living example of this approach, look at the [todomvc example](https://git
 
 ### There's A Small Gotcha
 
-If you adopt this structure there's a gotcha. 
+If you adopt this structure there's a gotcha.
 
-`events.cljs` and `subs.cljs` will never be `required` by any other 
-namespaces. To the Google Closure dependency mechanism it appears as 
+`events.cljs` and `subs.cljs` will never be `required` by any other
+namespaces. To the Google Closure dependency mechanism it appears as
 if these two namespaces are not needed and it doesn't load them.
 
 And, if the code does not get loaded, the registrations in these namespaces
-never happen. You'll then be baffled as to why none of your events handlers 
+never happen. You'll then be baffled as to why none of your events handlers
 are registered.
 
-Once you twig to what's going on, the solution is easy.  You must 
-explicitly `require` both namespaces, `events` and `subs`, in your `core` 
-namespace. Then they'll be loaded and the registrations will occur 
-as that loading happens. 
+Once you twig to what's going on, the solution is easy.  You must
+explicitly `require` both namespaces, `events` and `subs`, in your `core`
+namespace. Then they'll be loaded and the registrations will occur
+as that loading happens.
 
 ## Larger Apps
 
-Assuming your larger apps has multiple "panels" (or "views") which are 
+Assuming your larger apps has multiple "panels" (or "views") which are
 relatively independent, you might use this structure:
 ```
 src
@@ -68,7 +72,7 @@ src
 
 Continue to [Navigation](Navigation.md) to learn how to switch between panels of a larger app.
 
-*** 
+***
 
 Previous:  [CoEffects](coeffects.md)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 Up:  [Index](README.md)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
