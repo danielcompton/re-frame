@@ -3,8 +3,6 @@ description: Universal React and Node Applications simplified, performant, and r
 url: https://electrode-io.github.io
 baseurl: ""
 permalink: "/blog/:year/:month/:day/:title.html"
-paginate_path: "/blog/page:num/"
-paginate: 5
 timezone: America/Los_Angeles
 highlighter: pygments
 defaults:
@@ -47,11 +45,6 @@ exclude:
 - README.md
 - Rakefile
 - vendor/bundle
-markdown: redcarpet
-redcarpet:
-  extensions:
-  - fenced_code_blocks
-  - footnotes
 sass:
   style: :compressed
   sass_dir: _css
