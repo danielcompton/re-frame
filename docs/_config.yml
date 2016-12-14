@@ -8,3 +8,41 @@
    gems:
      - jekyll-coffeescript
      - jekyll-paginate
+defaults:
+- scope:
+    path: ''
+    type: posts
+  values:
+    layout: post
+    sectionid: blog
+- scope:
+    path: blog
+    type: pages
+  values:
+    sectionid: blog
+- scope:
+    path: docs
+    type: pages
+  values:
+    layout: docs
+    sectionid: docs
+- scope:
+    path: tips
+    type: pages
+  values:
+    sectionid: docs
+- scope:
+    path: contributing
+    type: pages
+  values:
+    sectionid: docs
+- scope:
+    path: ""
+    type: docs
+  values:
+    layout: docs
+    sectionid: docs
+
+collections:
+  docs:
+    output: true

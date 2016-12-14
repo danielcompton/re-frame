@@ -4,21 +4,14 @@ layout: default
 
 <div class="home">
 
-  <h1 class="page-heading">Re-frame Posts</h1>
+  <h1 class="page-heading">Re-frame</h1>
+
+  {% include nav_docs.html %}
+
+  <p>site docs</p>
+  <p>{{ site.docs }}</p>
 
   {{ content }}
-
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
 
   <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
 
