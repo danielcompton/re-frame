@@ -4,7 +4,6 @@ url: https://electrode-io.github.io
 baseurl: ""
 permalink: "/blog/:year/:month/:day/:title.html"
 timezone: America/Los_Angeles
-highlighter: pygments
 defaults:
 - scope:
     path: ''

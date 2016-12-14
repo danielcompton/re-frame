@@ -7,8 +7,6 @@ title: Effectful Handlers
 This tutorial shows you how to implement pure event handlers that side-effect.
 Yes, a surprising claim.
 
-{:toc}
-
 ### Events Happen
 
 Events "happen" when they are dispatched.
