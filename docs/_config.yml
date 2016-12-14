@@ -1,13 +1,12 @@
- github: [metadata]
- theme: minima
- timezone: Australia/Sydney
- kramdown:
-   auto_ids: true
-   input: GFM
-   hard_wrap: false
-   gems:
-     - jekyll-coffeescript
-     - jekyll-paginate
+name: Electrode
+description: Universal React and Node Applications simplified, performant, and reusable.
+url: https://electrode-io.github.io
+baseurl: ""
+permalink: "/blog/:year/:month/:day/:title.html"
+paginate_path: "/blog/page:num/"
+paginate: 5
+timezone: America/Los_Angeles
+highlighter: pygments
 defaults:
 - scope:
     path: ''
@@ -42,6 +41,24 @@ defaults:
   values:
     layout: docs
     sectionid: docs
+exclude:
+- Gemfile
+- Gemfile.lock
+- README.md
+- Rakefile
+- vendor/bundle
+markdown: redcarpet
+redcarpet:
+  extensions:
+  - fenced_code_blocks
+  - footnotes
+sass:
+  style: :compressed
+  sass_dir: _css
+gems:
+- jekyll-redirect-from
+- jekyll-paginate
+- bourbon
 
 collections:
   docs:
